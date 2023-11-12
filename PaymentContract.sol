@@ -12,7 +12,7 @@ contract PaymentContract {
             payable (msg.sender).transfer(refundAmount);
             emit Payment(msg.sender, msg.value, refundAmount);
         } else {
-            payable (msg.sender).transfer(msg.value);
+            payable(msg.sender).transfer(msg.value);
             emit Payment(msg.sender, msg.value, msg.value);
         }
     }
